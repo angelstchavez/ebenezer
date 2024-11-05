@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { IoMenu } from "react-icons/io5";
 import { FaSquare } from "react-icons/fa";
 import { Button } from "../ui/button";
@@ -14,11 +15,23 @@ import {
   SheetTrigger,
 } from "../ui/sheet";
 
-const Header = () => {
+const Header: React.FC = () => {
   const router = useRouter();
+  const [isScrolling, setIsScrolling] = useState<boolean>(false);
+
+  const handleScroll = (): void => {
+    setIsScrolling(window.scrollY > 0);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <header className="sticky top-0 backdrop-blur-sm z-20">
+    <header className={`sticky top-0 backdrop-blur-md z-20 ${isScrolling ? "border-b border-stone-200" : ""}`}>
       <div className="flex justify-center items-center py-3 bg-primary text-primary-foreground text-sm gap-3">
         <p className="text-white/60 hidden md:block">
           Iglesia Ebenezer Plenitud
@@ -46,7 +59,7 @@ const Header = () => {
                   <div className="grid gap-2">
                     <SheetClose asChild>
                       <Button onClick={() => router.push("/login")}>
-                        Inciar sesión
+                        Iniciar sesión
                       </Button>
                     </SheetClose>
                     <SheetClose asChild>
