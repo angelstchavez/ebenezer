@@ -45,6 +45,11 @@ const Header = () => {
                 <div className="grid gap-4 py-4">
                   <div className="grid gap-2">
                     <SheetClose asChild>
+                      <Button onClick={() => router.push("/login")}>
+                        Inciar sesión
+                      </Button>
+                    </SheetClose>
+                    <SheetClose asChild>
                       <Button
                         variant="outline"
                         onClick={() => router.push("/about")}
