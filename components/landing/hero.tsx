@@ -21,7 +21,7 @@ const Hero = () => {
   const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
 
   return (
-    <section className="pt-8 pb-20 md:pt-5 md:pb-10 bg-[radial-gradient(ellipse_200%_100%_at_bottom_left,#0066cc,#ffffff_100%)] overflow-x-clip">
+    <section className="pt-8 pb-20 md:pt-5 md:pb-10 bg-[radial-gradient(ellipse_200%_100%_at_bottom_left,#0066cc,#ffffff_50%)] overflow-x-clip">
       <div className="container mx-auto px-4">
         <div className="md:flex items-center">
           <div className="md:w-[478px]">
@@ -61,7 +61,7 @@ const Hero = () => {
               src={folderImage.src}
               alt="Folder 3d image"
               width="220"
-              className="hidden md:block -top-8 -left-32 md:absolute"
+              className="hidden md:block -top-12 -left-32 md:absolute"
               style={{
                 translateY: translateY,
                 rotate: -20,
@@ -71,7 +71,7 @@ const Hero = () => {
               src={calendarImage.src}
               alt="Calendar 3d image"
               width="220"
-              className="hidden md:block -top-8 -right-32 md:absolute"
+              className="hidden md:block -top-12 -right-32 md:absolute"
               style={{
                 translateY: translateY,
               }}
@@ -80,7 +80,7 @@ const Hero = () => {
               src={booksImage.src}
               alt="Books 3d image"
               width="220"
-              className="hidden lg:block absolute top-[500px] left-[650px]"
+              className="hidden lg:block absolute top-[450px] left-[850px]"
               style={{
                 translateY: translateY,
               }}

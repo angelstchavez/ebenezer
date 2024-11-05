@@ -14,7 +14,7 @@ const LogoTicket = () => {
   ];
 
   return (
-    <div className="py-8 md:py-12 bg-white">
+    <div className="py-8 md:py-12 bg-gradient-to-b from-[#FFFFFF] to-[#e0effe]">
       <div className="container mx-auto px-4">
         <div className="relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black,black,transparent)]">
           <div className="absolute inset-0 z-10 pointer-events-none" />
