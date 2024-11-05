@@ -5,9 +5,10 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRouter } from "next/navigation";
 import { Button } from "../ui/button";
 
-import platformSoftware from "@/assets/platform-software.png";
-import crossSoftware from "@/assets/cross-software.png";
-import calendarSoftware from "@/assets/calendar-software.png";
+import folderImage from "@/assets/folder.png";
+import booksImage from "@/assets/books.png";
+import calendarImage from "@/assets/calendar.png";
+import peopleImage from "@/assets/people.png";
 
 const Hero = () => {
   const router = useRouter();
@@ -20,14 +21,14 @@ const Hero = () => {
   const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
 
   return (
-    <section className="pt-8 pb-20 md:pt-5 md:pb-10 bg-[radial-gradient(ellipse_200%_100%_at_bottom_left,#BCBCBC,#ffffff_100%)] overflow-x-clip">
+    <section className="pt-8 pb-20 md:pt-5 md:pb-10 bg-[radial-gradient(ellipse_200%_100%_at_bottom_left,#0066cc,#ffffff_100%)] overflow-x-clip">
       <div className="container mx-auto px-4">
         <div className="md:flex items-center">
           <div className="md:w-[478px]">
             <div className="text-sm inline-flex border border-[#222]/10 px-3 py-1 rounded-lg tracking-tight">
               Versión 1.0 disponible
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tighter bg-gradient-to-b from-stone-950 to-stone-700 text-transparent bg-clip-text mt-6">
+            <h1 className="text-5xl md:text-7xl font-bold tracking-tighter bg-gradient-to-b from-blue-700 to-blue-950 text-transparent bg-clip-text mt-6">
               Mejora la productividad
             </h1>
             <p className="text-xl tracking-tight mt-6">
@@ -43,33 +44,43 @@ const Hero = () => {
           </div>
           <div className="mt-20 md:mt-0 md:h-[648px] md:flex-1 relative">
             <motion.img
-              src={platformSoftware.src}
-              alt="Platform software"
-              className="md:absolute md:h-full md:w-auto md:max-w-none md:-left-6 lg:left-0"
+              src={peopleImage.src}
+              alt="People 3d image"
+              className="bg-gradient-to-b from-blue-100 to-blue-200 shadow-lg rounded-xl md:absolute md:h-full md:w-auto md:max-w-none md:-left-6 lg:left-0"
               animate={{
-                translateY: [-30, 30],
+                translateY: [-20, 20],
               }}
               transition={{
                 repeat: Infinity,
                 repeatType: "mirror",
-                duration: 10,
+                duration: 3,
                 ease: "easeInOut",
               }}
             />
             <motion.img
-              src={crossSoftware.src}
-              alt="Cylinder Image"
+              src={folderImage.src}
+              alt="Folder 3d image"
               width="220"
               className="hidden md:block -top-8 -left-32 md:absolute"
+              style={{
+                translateY: translateY,
+                rotate: -20,
+              }}
+            />
+            <motion.img
+              src={calendarImage.src}
+              alt="Calendar 3d image"
+              width="220"
+              className="hidden md:block -top-8 -right-32 md:absolute"
               style={{
                 translateY: translateY,
               }}
             />
             <motion.img
-              src={calendarSoftware.src}
-              alt="Noodle Image"
+              src={booksImage.src}
+              alt="Books 3d image"
               width="220"
-              className="hidden lg:block absolute top-[524px] left-[448px]"
+              className="hidden lg:block absolute top-[500px] left-[650px]"
               style={{
                 translateY: translateY,
               }}

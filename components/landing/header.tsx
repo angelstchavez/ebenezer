@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { IoMenu } from "react-icons/io5";
 import { FaSquare } from "react-icons/fa";
 import { Button } from "../ui/button";
@@ -17,22 +16,10 @@ import {
 
 const Header: React.FC = () => {
   const router = useRouter();
-  const [isScrolling, setIsScrolling] = useState<boolean>(false);
-
-  const handleScroll = (): void => {
-    setIsScrolling(window.scrollY > 0);
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   return (
-    <header className={`sticky top-0 backdrop-blur-md z-20 ${isScrolling ? "border-b border-stone-200" : ""}`}>
-      <div className="flex justify-center items-center py-3 bg-primary text-primary-foreground text-sm gap-3">
+    <header className="sticky top-0 backdrop-blur-md z-20">
+      <div className="flex justify-center items-center py-3 bg-blue-700 text-primary-foreground text-sm gap-3">
         <p className="text-white/60 hidden md:block">
           Iglesia Ebenezer Plenitud
         </p>
@@ -40,7 +27,7 @@ const Header: React.FC = () => {
       <div className="py-4">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between">
-            <FaSquare size={40} />
+            <FaSquare size={40} className="text-blue-700" />
 
             <Sheet>
               <SheetTrigger asChild>

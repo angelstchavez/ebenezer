@@ -31,7 +31,7 @@ const LogoTicket = () => {
             }}
           >
             {words.concat(words).map((word, index) => (
-              <div key={index} className="text-2xl font-bold tracking-tighter bg-gradient-to-b from-stone-950 to-stone-700 text-transparent bg-clip-text">
+              <div key={index} className="text-3xl font-bold tracking-tighter bg-gradient-to-b from-blue-900 to-blue-700 text-transparent bg-clip-text">
                 {word}
               </div>
             ))}
