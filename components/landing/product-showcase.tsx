@@ -43,9 +43,9 @@ const ProductShowcase = () => {
           <motion.img
             src={bookyImage.src}
             alt={"Pyramid Image"}
-            height={180}
-            width={180}
-            className="hidden md:block absolute -right-28 -top-24"
+            height={220}
+            width={220}
+            className="hidden md:block absolute -right-8 -top-24"
             style={{
               translateY,
             }}

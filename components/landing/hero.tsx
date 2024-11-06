@@ -7,7 +7,6 @@ import { Button } from "../ui/button";
 
 import folderImage from "@/assets/folder.png";
 import booksImage from "@/assets/books.png";
-import calendarImage from "@/assets/calendar.png";
 import peopleImage from "@/assets/people.png";
 
 const Hero = () => {
@@ -65,15 +64,6 @@ const Hero = () => {
               style={{
                 translateY: translateY,
                 rotate: -20,
-              }}
-            />
-            <motion.img
-              src={calendarImage.src}
-              alt="Calendar 3d image"
-              width="220"
-              className="hidden md:block -top-12 -right-32 md:absolute"
-              style={{
-                translateY: translateY,
               }}
             />
             <motion.img
