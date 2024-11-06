@@ -20,7 +20,7 @@ const ProductShowcase = () => {
   return (
     <section
       ref={sectionRef}
-      className="mt-8 bg-gradient-to-b from-[#FFFFFF] to-[#c1e0fe] PY-24 overflow-x-clip"
+      className="mt-8 bg-gradient-to-b from-[#FFFFFF] to-[#c1e0fe] py-24 overflow-x-clip"
     >
       <div className="container mx-auto px-4">
         <div className="max-w-[540px] mx-auto">
