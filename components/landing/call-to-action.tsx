@@ -5,8 +5,10 @@ import engineImage from "@/assets/flower.png";
 import calendarImage from "@/assets/calendar.png";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { useRouter } from "next/navigation";
 
 const CallToAction = () => {
+  const router = useRouter();
   const sectionRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -50,7 +52,7 @@ const CallToAction = () => {
           />
         </div>
         <div className="flex gap-2 mt-10 justify-center">
-          <Button>Empezar ahora</Button>
+          <Button onClick={() => router.push("/login")}>Empezar ahora</Button>
         </div>
       </div>
     </section>

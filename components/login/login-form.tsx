@@ -1,27 +1,26 @@
 import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import Image from "next/image";
+
+import personsImage from "@/assets/persons.png";
 
 export function LoginForm() {
   return (
     <Card className="mx-auto max-w-sm">
       <CardHeader>
-        <CardTitle className="text-2xl">Iniciar sesión</CardTitle>
-        <CardDescription>
-          Ingresa tu correo electrónico abajo para iniciar sesión en tu cuenta
-        </CardDescription>
+        <CardTitle className="text-2xl text-center bg-gradient-to-b from-blue-700 to-blue-950 text-transparent bg-clip-text">
+          Iglesia Ebenezer Plenitud
+        </CardTitle>
+        <div className="border-b">
+          <Image src={personsImage} alt={""} />
+        </div>
       </CardHeader>
       <CardContent>
-        <div className="grid gap-4">
+        <div className="grid gap-2">
           <div className="grid gap-2">
             <Label htmlFor="email">Correo electrónico</Label>
             <Input
