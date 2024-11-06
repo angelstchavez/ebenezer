@@ -20,7 +20,7 @@ const CallToAction = () => {
   return (
     <section
       ref={sectionRef}
-      className="bg-gradient-to-b from-white to-[#D2DCFF] py-24 overflow-x-clip"
+      className="bg-gradient-to-b from-white to-[#c1e0fe] py-24 overflow-x-clip"
     >
       <div className="container mx-auto px-4">
         <div className="max-w-[540px] mx-auto relative">

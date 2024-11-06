@@ -1,4 +1,5 @@
 import CallToAction from "@/components/landing/call-to-action";
+import About from "@/components/landing/about";
 import Footer from "@/components/landing/footer";
 import Header from "@/components/landing/header";
 import Hero from "@/components/landing/hero";
@@ -12,6 +13,7 @@ export default function Home() {
       <Hero />
       <LogoTicket />
       <ProductShowcase />
+      <About />
       <CallToAction />
       <Footer />
     </>
