@@ -44,11 +44,11 @@ const data = {
       items: [
         {
           title: "Registrar asistencia",
-          url: "#",
+          url: "/dashboard/assist/register",
         },
         {
           title: "Consultar registros",
-          url: "#",
+          url: "/dashboard/assist/consult",
         },
         {
           title: "Reportes",
