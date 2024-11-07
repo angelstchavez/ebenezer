@@ -1,5 +1,7 @@
+import ConsultSection from "@/components/dashboard/assists/consult/consult-section";
+
 const ConsultAssistPage = () => {
-  return <div className="mt-4 mx-4">ConsultAssit</div>;
+  return <ConsultSection />;
 };
 
 export default ConsultAssistPage;
