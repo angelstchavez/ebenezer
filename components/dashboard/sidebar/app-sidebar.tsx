@@ -26,6 +26,7 @@ const data = {
     name: "Juan Perez",
     email: "m@example.com",
     avatar: "/avatars/shadcn.jpg",
+    alias: "JP",
   },
   teams: [
     {
@@ -36,21 +37,21 @@ const data = {
   ],
   navMain: [
     {
-      title: "Playground",
+      title: "Asistencias",
       url: "#",
       icon: SquareTerminal,
       isActive: true,
       items: [
         {
-          title: "History",
+          title: "Registrar asistencia",
           url: "#",
         },
         {
-          title: "Starred",
+          title: "Consultar registros",
           url: "#",
         },
         {
-          title: "Settings",
+          title: "Reportes",
           url: "#",
         },
       ],
@@ -107,15 +108,11 @@ const data = {
           url: "#",
         },
         {
-          title: "Team",
+          title: "Usuarios",
           url: "#",
         },
         {
-          title: "Billing",
-          url: "#",
-        },
-        {
-          title: "Limits",
+          title: "Sistema",
           url: "#",
         },
       ],
