@@ -51,8 +51,12 @@ const data = {
           url: "/dashboard/assist/consult",
         },
         {
-          title: "Reportes",
+          title: "Generar reportes",
           url: "#",
+        },
+        {
+          title: "Admiistrar eventos",
+          url: "/dashboard/assist/events",
         },
       ],
     },
